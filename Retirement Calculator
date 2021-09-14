@@ -1,0 +1,27 @@
+  
+/*
+ *	UCF COP3330 Fall 2021 Assignment 1 Solution
+ *	Copyright 2021 Ryan Maharaj
+ */
+ 
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        
+        int age1, age2, ret, year;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your age: ");
+        age1 = sc.nextInt();
+        
+        System.out.println("Enter age to retire at: ");
+        age2 = sc.nextInt();
+        
+        sc.close();
+        ret = age2 - age1;
+        System.out.println("you have "+ret+" years until you retire.");
+        year = ret + 2021;
+        System.out.println("It is 2021, you will retire in "+year);
+        
+    }
+}
