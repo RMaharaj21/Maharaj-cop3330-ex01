@@ -1,0 +1,33 @@
+/*
+ *	UCF COP3330 Fall 2021 Assignment 1 Solution
+ *	Copyright 2021 Ryan Maharaj
+ */
+ 
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        
+        int people, pizza, slices, pieces, total, remainder; 
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("How many people? ");
+        people = sc.nextInt();
+        
+        System.out.println("How many pizzas do you have? ");
+        pizza = sc.nextInt();
+        System.out.println("How many slices per pizza? ");
+        slices = sc.nextInt();
+        
+        sc.close();
+        pieces = pizza * slices;
+        total = pieces / people;
+        remainder = pieces % people;
+        System.out.println(people+" people with "+pizza+" pizzas ("+pieces+") slices");
+        System.out.println("Each person gets "+total+" pieces of pizza");
+        System.out.println("There are "+remainder+" leftover pieces");
+        
+    }
+}
+
+
