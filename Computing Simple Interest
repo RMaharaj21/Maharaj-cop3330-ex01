@@ -1,0 +1,28 @@
+/*
+ *	UCF COP3330 Fall 2021 Assignment 1 Solution
+ *	Copyright 2021 Ryan Maharaj
+ */
+ 
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        
+        int principal, years;
+        double interest1, interest2, total;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the principal: ");
+        principal = sc.nextInt();
+        System.out.println("Enter the rate of interest: ");
+        interest1 = sc.nextDouble();
+        System.out.println("Enter the number of years: ");
+        years = sc.nextInt();
+        
+        sc.close();
+        interest2 = interest1 /100;
+
+        total = principal * (1 + (interest2 * years));
+        System.out.println("After "+years+" years at "+interest1+" the investment will be worth $"+total+".");
+
+    }
+}
