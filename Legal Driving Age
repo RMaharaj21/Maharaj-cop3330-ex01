@@ -1,0 +1,29 @@
+/*
+ *	UCF COP3330 Fall 2021 Assignment 1 Solution
+ *	Copyright 2021 Ryan Maharaj
+ */
+ 
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        
+        int age, legal_age;
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("How old are you ");
+        age = sc.nextInt();
+
+        sc.close();
+        
+        legal_age = 16;
+
+        if (age < legal_age){
+            String result = "are not";
+        } 
+        else{
+            String result = "are";
+        }
+        System.out.println("You "+result+" old enough to legally drive.");
+    }
+}
