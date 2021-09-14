@@ -1,0 +1,31 @@
+  
+/*
+ *	UCF COP3330 Fall 2021 Assignment 1 Solution
+ *	Copyright 2021 Ryan Maharaj
+ */
+ 
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) 
+  {
+      int num1, num2, sum, subt, prod, quot;
+      Scanner input = new Scanner(System.in);
+      System.out.println("What is the first number? ");
+      num1 = input.nextInt();
+      System.out.println("What is the second number? ");
+      num2 = input.nextInt();
+      
+      input.close();
+      
+      sum = num1 + num2;
+      subt = num1 - num2;
+      prod = num1 * num2;
+      quot = num1 / num2;
+      
+      System.out.println(num1+"+"+num2+"="+sum);
+      System.out.println(num1+"-"+num2+"="+subt);
+      System.out.println(num1+"*"+num2+"="+prod);
+      System.out.println(num1+"/"+num2+"="+quot);
+  }
+}
