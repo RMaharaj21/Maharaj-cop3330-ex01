@@ -1,0 +1,28 @@
+/*
+ *	UCF COP3330 Fall 2021 Assignment 1 Solution
+ *	Copyright 2021 Ryan Maharaj
+ */
+ 
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        
+        int length, width;
+        double amount, area, bucket;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("What is the length in feet? ");
+        width = sc.nextInt();
+        
+        System.out.println("What is the width in feet? ");
+        length = sc.nextInt();
+        
+        sc.close();
+        area = length * width;
+        bucket = 350;
+        amount = area / bucket;
+        System.out.println("You will need to purchase "+Math.ceil(amount)+" gallons of paint to cover "+area+" square feet. ");
+
+        
+    }
+}
