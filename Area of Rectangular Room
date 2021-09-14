@@ -1,0 +1,29 @@
+/*
+ *	UCF COP3330 Fall 2021 Assignment 1 Solution
+ *	Copyright 2021 Ryan Maharaj
+ */
+ 
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        
+        int length, width; 
+        double area, aream2;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("What is the length of the room in feet? ");
+        width = sc.nextInt();
+        
+        System.out.println("What is the width of the room in feet? ");
+        length = sc.nextInt();
+        System.out.println("You entered dimensions of" +length+ "feet by" +width+ "feet.");
+        
+        sc.close();
+        area = length * width;
+        aream2 = area * 0.09290304;
+        System.out.println("The area is ");
+        System.out.println(area+" square feet");
+        System.out.println(aream2+" square meters");
+        
+    }
+}
