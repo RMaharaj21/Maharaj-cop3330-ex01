@@ -1,0 +1,43 @@
+/*
+ *	UCF COP3330 Fall 2021 Assignment 1 Solution
+ *	Copyright 2021 Ryan Maharaj
+ */
+ 
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        
+        int sex, ounce, weight, hours;
+        double r, BAC, a, b, c;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter a 1 if you are male or a 2 if you are female: ");
+        sex = scan.nextInt();
+        if(sex == 1){
+            r = .73;
+        }
+        else{
+            r = .66;
+        }
+        System.out.println("How many ounces of alcohol did you have? ");
+        ounce = scan.nextInt();
+        System.out.println("What is your weight, in pounds? ");
+        weight = scan.nextInt();
+        System.out.println("How many hours has it been since your last drink? ");
+        hours = scan.nextInt();
+        
+        a = ounce * 5.14;
+        b = weight * r;
+        c = .015 * hours;
+        BAC = (a / b) - c;
+        
+        System.out.println("Your BAC is "+BAC);
+        if (BAC < .08){
+            System.out.println("It is legal for you to drive.");
+        }
+        else{
+             System.out.println("It is not legal for you to drive.");
+        }
+    }
+}
+
