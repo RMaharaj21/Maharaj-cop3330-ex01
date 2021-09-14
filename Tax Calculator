@@ -1,0 +1,30 @@
+/*
+ *	UCF COP3330 Fall 2021 Assignment 1 Solution
+ *	Copyright 2021 Ryan Maharaj
+ */
+
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        
+        int amount;
+        double tax, subtotal, total;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("What is the order amount? ");
+        amount = sc.nextInt();
+        System.out.print("What is the state? ");
+        String state = sc.next();
+        sc.close();
+        
+        subtotal = amount;
+        
+        if (state.equals("WI")){
+            total = amount;
+            tax = .055;
+            subtotal = (total * .055) + total;
+        } 
+        System.out.println("The total is $"+subtotal);
+
+    }
+}
