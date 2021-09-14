@@ -1,0 +1,33 @@
+/*
+ *	UCF COP3330 Fall 2021 Assignment 1 Solution
+ *	Copyright 2021 Ryan Maharaj
+ */
+ 
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        
+        int principal, years, n;
+        double interest1, interest2, a, b, c, d;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("What is the principal amount? ");
+        principal = sc.nextInt();
+        System.out.println("What is the rate? ");
+        interest1 = sc.nextDouble();
+        System.out.println("What is the number of years? ");
+        years = sc.nextInt();
+        System.out.println("What is the number of times the interest is compounded per year? ");
+        n = sc.nextInt();
+        
+        sc.close();
+        interest2 = interest1 / 100;
+
+        a = (1 + (interest2 / n));
+        b = n*years;
+        c = Math.pow(a, b);
+        d = principal * c;
+        System.out.println("$"+principal+" invested at "+interest1+" for "+years+ "years compounded "+n+" times per year is $"+d);
+
+    }
+}
